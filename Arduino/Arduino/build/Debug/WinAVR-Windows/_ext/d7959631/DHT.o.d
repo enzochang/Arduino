@@ -1,4 +1,6 @@
-build/Debug/WinAVR-Windows/main.o: main.cpp \
+build/Debug/WinAVR-Windows/_ext/d7959631/DHT.o: \
+ ../../../Arduino/libraries/DHT_sensor_library/DHT.cpp \
+ ../../../Arduino/libraries/DHT_sensor_library/DHT.h \
  C:/Arduino/hardware/arduino/avr/cores/arduino/Arduino.h \
  C:/Arduino/hardware/arduino/avr/cores/arduino/binary.h \
  C:/Arduino/hardware/arduino/avr/cores/arduino/WCharacter.h \
@@ -9,8 +11,9 @@ build/Debug/WinAVR-Windows/main.o: main.cpp \
  C:/Arduino/hardware/arduino/avr/cores/arduino/Printable.h \
  C:/Arduino/hardware/arduino/avr/cores/arduino/USBAPI.h \
  C:/Arduino/hardware/arduino/avr/cores/arduino/Arduino.h \
- C:/Arduino/hardware/arduino/avr/variants/standard/pins_arduino.h \
- ../../../Arduino/libraries/DHT_sensor_library/DHT.h
+ C:/Arduino/hardware/arduino/avr/variants/standard/pins_arduino.h
+
+../../../Arduino/libraries/DHT_sensor_library/DHT.h:
 
 C:/Arduino/hardware/arduino/avr/cores/arduino/Arduino.h:
 
@@ -33,5 +36,3 @@ C:/Arduino/hardware/arduino/avr/cores/arduino/USBAPI.h:
 C:/Arduino/hardware/arduino/avr/cores/arduino/Arduino.h:
 
 C:/Arduino/hardware/arduino/avr/variants/standard/pins_arduino.h:
-
-../../../Arduino/libraries/DHT_sensor_library/DHT.h:

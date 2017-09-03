@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/d7959631/DHT.o \
 	${OBJECTDIR}/main.o
 
 
@@ -62,10 +63,15 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/arduino.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	avr-gcc -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/arduino ${OBJECTFILES} ${LDLIBSOPTIONS} ${FLAGS_LINKER}
 
+${OBJECTDIR}/_ext/d7959631/DHT.o: ../../../Arduino/libraries/DHT_sensor_library/DHT.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/d7959631
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I${INCLUDE} -I../../../Arduino/libraries/DHT_sensor_library -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/d7959631/DHT.o ../../../Arduino/libraries/DHT_sensor_library/DHT.cpp
+
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I${INCLUDE} -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I${INCLUDE} -I../../../Arduino/libraries/DHT_sensor_library -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
