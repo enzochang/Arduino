@@ -6,6 +6,9 @@
                    projectFiles="true">
       <itemPath>../../../Arduino/libraries/DHT_sensor_library/DHT.cpp</itemPath>
       <itemPath>../../../Arduino/libraries/DHT_sensor_library/DHT.h</itemPath>
+      <itemPath>../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp</itemPath>
+      <itemPath>../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/SoftwareSerial.h</itemPath>
+      <itemPath>Temperature.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -14,6 +17,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Temperature.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -30,6 +34,9 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../../../Arduino/libraries/DHT_sensor_library</Elem>
+    <Elem>../../../../../../Arduino/hardware/arduino/avr/libraries</Elem>
+    <Elem>D:/Temp/Robolink-master/Robolink-master/Rokit</Elem>
+    <Elem>D:/Temp/CoDrone-master/CoDrone-master</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -50,6 +57,7 @@
           <incDir>
             <pElem>${INCLUDE}</pElem>
             <pElem>../../../Arduino/libraries/DHT_sensor_library</pElem>
+            <pElem>../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src</pElem>
           </incDir>
           <commandLine>${FLAGS_GPP}</commandLine>
         </ccTool>
@@ -58,6 +66,16 @@
           <commandLine>${FLAGS_LINKER}</commandLine>
         </linkerTool>
       </compileType>
+      <item path="../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/SoftwareSerial.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="../../../Arduino/libraries/DHT_sensor_library/DHT.cpp"
             ex="false"
             tool="1"
@@ -67,6 +85,10 @@
             ex="false"
             tool="3"
             flavor2="0">
+      </item>
+      <item path="Temperature.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Temperature.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -91,6 +113,16 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/SoftwareSerial.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="../../../Arduino/libraries/DHT_sensor_library/DHT.cpp"
             ex="false"
             tool="1"
@@ -100,6 +132,10 @@
             ex="false"
             tool="3"
             flavor2="0">
+      </item>
+      <item path="Temperature.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Temperature.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

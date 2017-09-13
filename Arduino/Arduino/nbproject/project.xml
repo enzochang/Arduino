@@ -11,6 +11,9 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../../../Arduino/libraries/DHT_sensor_library</sourceRootElem>
+                <sourceRootElem>../../../../../../Arduino/hardware/arduino/avr/libraries</sourceRootElem>
+                <sourceRootElem>D:/Temp/Robolink-master/Robolink-master/Rokit</sourceRootElem>
+                <sourceRootElem>D:/Temp/CoDrone-master/CoDrone-master</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

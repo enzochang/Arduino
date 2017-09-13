@@ -35,7 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/d3da0bbf/SoftwareSerial.o \
 	${OBJECTDIR}/_ext/d7959631/DHT.o \
+	${OBJECTDIR}/Temperature.o \
 	${OBJECTDIR}/main.o
 
 
@@ -63,15 +65,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/arduino.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	avr-gcc -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/arduino ${OBJECTFILES} ${LDLIBSOPTIONS} ${FLAGS_LINKER}
 
+${OBJECTDIR}/_ext/d3da0bbf/SoftwareSerial.o: ../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/d3da0bbf
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I${INCLUDE} -I../../../Arduino/libraries/DHT_sensor_library -I../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/d3da0bbf/SoftwareSerial.o ../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp
+
 ${OBJECTDIR}/_ext/d7959631/DHT.o: ../../../Arduino/libraries/DHT_sensor_library/DHT.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/d7959631
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I${INCLUDE} -I../../../Arduino/libraries/DHT_sensor_library -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/d7959631/DHT.o ../../../Arduino/libraries/DHT_sensor_library/DHT.cpp
+	$(COMPILE.cc) -g -I${INCLUDE} -I../../../Arduino/libraries/DHT_sensor_library -I../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/d7959631/DHT.o ../../../Arduino/libraries/DHT_sensor_library/DHT.cpp
+
+${OBJECTDIR}/Temperature.o: Temperature.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I${INCLUDE} -I../../../Arduino/libraries/DHT_sensor_library -I../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Temperature.o Temperature.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I${INCLUDE} -I../../../Arduino/libraries/DHT_sensor_library -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I${INCLUDE} -I../../../Arduino/libraries/DHT_sensor_library -I../../../../../../Arduino/hardware/arduino/avr/libraries/SoftwareSerial/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
